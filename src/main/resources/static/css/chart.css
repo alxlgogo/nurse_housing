@@ -1,0 +1,113 @@
+.header {
+    width: 90%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 5% 72% 5% 18%;
+}
+
+.header-title {
+    font-size: 35px;
+    font-weight: bolder;
+    margin-left: 20px;
+    color: #b1960b;
+    display: grid;
+    align-items: center;
+}
+
+.hotline-label {
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.hotline-txt {
+    margin-top: 10px;
+    font-size: 1.6em;
+    font-weight: bolder;
+}
+
+.chart1 {
+    width: 90%;
+    height: 600px;
+    display: grid;
+    margin: auto;
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: #096d11;
+}
+
+.chart1 div {
+    /*border: #34b9ff 1px solid;*/
+}
+
+.chart1-1-2, .chart1-2-2 {
+    border-right: lightseagreen 1px solid;
+}
+
+.chart1-1-2 span, .chart1-2-2 span {
+    letter-spacing: 2px;
+    line-height: 10px;
+}
+
+.title-1, .title-2, .title-3 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: green;
+}
+
+
+.chart1-1, .chart1-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    border: lightseagreen 1px solid;
+}
+
+.chart1-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+}
+
+.chart1-3 {
+    border: lightseagreen 1px solid;
+}
+
+.chart1-3-2, .chart1-3-4 {
+    /*border: lightseagreen 1px solid;*/
+}
+
+
+.chart1-3-1, .chart1-3-3 {
+    border-right: lightseagreen 1px solid;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    text-align: left;
+}
+
+
+.chart1-1-1-1,.chart1-2-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
+}
+
+.layui-input-block {
+    margin-left: 10px;
+    min-height: 30px;
+}
+

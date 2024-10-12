@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to nurse hoursing</title>
+
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <script type="text/javascript" src="/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script src="./js/home.js"></script>
+</head>
+
+<body>
+
+<div class="header">
+    <div><img src="./images/nursing-home-icon-1.jpg" style="width: 50px;height: 50px"></div>
+    <div class="header-title">
+        <span>HAPPY NURSING HOME</span>
+    </div>
+    <div>
+        <i class="layui-icon layui-icon-service" style="font-size: 50px; color: #1E9FFF;"></i>
+    </div>
+    <div>
+        <span class="hotline-label">TEL:</span>
+        <div class="hotline-txt">083-024-xxxx</div>
+    </div>
+
+</div>
+</div>
+
+<div class="my-top-bar">
+    <ul class="layui-nav layui-bg-gray">
+        <li class="layui-nav-item"><a href="">HOME PAGE</a></li>
+        <li class="layui-nav-item"><a href="">BOOK</a></li>
+        <li class="layui-nav-item"><a href="">FIND</a></li>
+        <li class="layui-nav-item">
+            <a href="http://localhost:8080/register.html">REGISTER</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="http://localhost:8080/login.html">LOGIN</a>
+        </li>
+        <li class="layui-nav-item"><a href="/chart">CHART</a></li>
+    </ul>
+    <br>
+</div>
+
+<div class="layui-carousel my-layui-carousel" id="test10">
+    <div carousel-item="">
+        <div><img src="./images/move-ad-01.jpg"></div>
+        <div><img src="./images/move-ad-02.jpg"></div>
+        <div><img src="./images/move-ad-03.jpg"></div>
+        <div><img src="./images/move-ad-04.jpg"></div>
+        <div><img src="./images/move-ad-05.png"></div>
+        <div><img src="./images/move-ad-06.jpg"></div>
+        <div><img src="./images/move-ad-07.jpg"></div>
+    </div>
+</div>
+
+<div>
+    <div class="areas1">
+        <div class="container">
+            <div class="areas-title">Area<br></div>
+            <div class="areas-items">
+                <a href="" title="Dublin">Dublin</a>
+                <a href="" title="Cork">Cork</a>
+                <a href="" title="Galway">Galway</a>
+                <a href="h" title="Limerick">Limerick</a>
+                <a href="" title="Waterford">Waterford</a>
+                <a href="" title="Drogheda">Drogheda</a>
+                <a href="" title="Carlow">Carlow</a>
+                <a href="" title="Swords">Swords</a>
+                <a href="" title="Dunleary">Dunleary</a>
+                <a href="" title="Athlone">Athlone</a>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <div class="nurse-introduce">
+        <div class="nurse-introduce-item1">
+            <img src="./images/ad-01.jpg">
+            <h3 class="item-tit">Dublin nursing house</h3>
+            <div class="nurse-introduce-item2">
+                <span class="info-price">
+                    <span class="euro-icon">€</span>
+                    <span> 1000 </span>
+                </span>
+                <span class="info-city">Dublin</span>
+            </div>
+        </div>
+
+        <div class="nurse-introduce-item1">
+            <img src="./images/ad-02.jpg">
+            <h3 class="item-tit">Galway nursing house</h3>
+            <div class="nurse-introduce-item2">
+                <span class="info-price">
+                    <span class="euro-icon">€</span>
+                    <span> 900 </span>
+                </span>
+                <span class="info-city">Galway</span>
+            </div>
+        </div>
+
+        <div class="nurse-introduce-item1">
+            <img src="./images/ad-03.jpg">
+            <h3 class="item-tit">Cork nursing house</h3>
+            <div class="nurse-introduce-item2">
+                <span class="info-price">
+                    <span class="euro-icon">€</span>
+                    <span> 900 </span>
+                </span>
+                <span class="info-city">Cork</span>
+            </div>
+        </div>
+
+        <div class="nurse-introduce-item1">
+            <img src="./images/ad-04.jpg">
+            <h3 class="item-tit">Waterford nursing house</h3>
+            <div class="nurse-introduce-item2">
+                <span class="info-price">
+                    <span class="euro-icon">€</span>
+                    <span> 900 </span>
+                </span>
+                <span class="info-city">Waterford</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="rank-survey">
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <h2>House Rank</h2>
+            <ul class="layui-tab-title">
+                <li class="layui-this">Popular Home</li>
+                <li>User Survey</li>
+            </ul>
+            <div class="layui-tab-content" style="height: 100px;">
+                <div class="layui-tab-item layui-show homepage-info1">
+<!--                    https://www.forbes.com/sites/williamhaseltine/2020/01/10/top-10-tips-for-caring-for-older-adults/?sh=5e13655c7a5e-->
+                    <div class="rank-css">
+                        <div class="house-name">
+                            Cork nursing house
+                        </div>
+                        <div id="house1"></div>
+                    </div>
+
+                    <div class="rank-css">
+                        <div class="house-name">
+                            Dublin nursing house
+                        </div>
+                        <div id="house2"></div>
+                    </div>
+
+                    <div class="rank-css">
+                        <div class="house-name">
+                            Galway nursing house
+                        </div>
+                        <div id="house3"></div>
+                    </div>
+
+                    <div class="rank-css">
+                        <div class="house-name">
+                            Waterford nursing house
+                        </div>
+                        <div id="house4"></div>
+                    </div>
+
+
+                </div>
+                <div class="layui-tab-item">
+                    <p>
+                        In order to let us know everyone's needs, so as to achieve better service to everyone. If you wish, please participate in the survey. thank you very much.
+                    </p>
+                    <p style="margin-top: 20px;color: limegreen;font-weight: bold;font-size: 1.2em">
+                        <a style="color: lightcoral;" href="/pages/userSurvey.html">Click here to participate in the survey</a>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <h2>Consultation</h2>
+            <ul class="layui-tab-title">
+                <li class="layui-this">Top 10 Tips For Caring For Older Adults</li>
+<!--                https://www.forbes.com/sites/williamhaseltine/2020/01/10/top-10-tips-for-caring-for-older-adults/?sh=5e13655c7a5e-->
+            </ul>
+            <div class="layui-tab-content" style="height: 100px;">
+                <div class="homepage-info2">
+                    <div>
+                        1.Keep care at home if possible.
+                    </div>
+                    <div>
+                        2.Coordinate your care.
+                    </div>
+                    <div>
+                        3.Make care regimens person centered.
+                    </div>
+                    <div>
+                        4.Enable social inclusion.
+                    </div>
+                    <div>
+                        5.Stay up to date on the latest technology.
+                    </div>
+                    <div>
+                        6.Investigate your insurance options.
+                    </div>
+                    <div>
+                        7.Take care of the caregivers.
+                    </div>
+                    <div>
+                        8.Learn and practice mindful communication.
+                    </div>
+                    <div>
+                        9.Educate yourself.
+                    </div>
+                    <div>
+                        10.Create a safe environment.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <h2>Health</h2>
+            <ul class="layui-tab-title">
+                <li class="layui-this">10 Healthy Habits for Seniors</li>
+                <!--                https://www.forbes.com/sites/williamhaseltine/2020/01/10/top-10-tips-for-caring-for-older-adults/?sh=5e13655c7a5e-->
+            </ul>
+            <div class="layui-tab-content" style="height: 100px;">
+                <div class="homepage-info2">
+                    <div>
+                        1. Eat healthy.
+                    </div>
+                    <div>
+                        2. Focus on prevention.
+                    </div>
+                    <div>
+                        3. Get information on medication management.
+                    </div>
+                    <div>
+                        4. Get some sleep.
+                    </div>
+                    <div>
+                        5. Remember mental health.
+                    </div>
+                    <div>
+                        6. Screen for vision changes.
+                    </div>
+                    <div>
+                        7. Socialize.
+                    </div>
+                    <div>
+                        8. Stay physically active.
+                    </div>
+                    <div>
+                        9. Take advantage of free physicals.
+                    </div>
+                    <div>
+                        10. Visit the dentist every six months.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="footer">
+        © 2021 www.bestNursingHome.com
+    </div>
+
+</div>
+
+
+<script>
+
+</script>
+
+</body>
+</html>

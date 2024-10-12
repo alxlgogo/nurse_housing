@@ -1,0 +1,7 @@
+.userList{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+.my-layui-nav-tree{
+    height: 700px;
+}

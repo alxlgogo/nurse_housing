@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to nurse hoursing</title>
+
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/userSurvey.css">
+    <script type="text/javascript" src="/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script src="../js/userServey.js"></script>
+</head>
+<body>
+
+<div class="user-survey">
+    <div class="layui-tab layui-tab-brief">
+        <h2>Survey</h2>
+        <div class="layui-tab-content user-survey1" style="height: 100px;">
+            <div class="layui-tab-item layui-show">
+<!--                form start-->
+                <form class="layui-form" action="">
+                    <div class="gender">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Gender</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="gender" value="male" title="male" checked="">
+                                <input type="radio" name="gender" value="female" title="female">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Age</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="age" value="60-65" title="60-65" checked="">
+                                <input type="radio" name="age" value="66-70" title="66-70">
+                                <input type="radio" name="age" value="71-75" title="76-80">
+                                <input type="radio" name="age" value="81-85" title="86-90">
+                                <input type="radio" name="age" value="90-" title="90+">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Price</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="price" value="less 1000" title="1-1000" checked="">
+                                <input type="radio" name="price" value="1001-1500" title="1001-1500">
+                                <input type="radio" name="price" value="1501-2000" title="1501-2000">
+                                <input type="radio" name="price" value="2001-2500" title="2001-2500">
+                                <input type="radio" name="price" value="2500+" title="2500+">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Hobbies</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="hobby" value="Sports" title="Sports">
+                                <input type="checkbox" name="hobby" value="Gardening" title="Gardening" checked="">
+                                <input type="checkbox" name="hobby" value="Gaming" title="Gaming">
+                                <input type="checkbox" name="hobby" value="Cooking" title="Cooking">
+                                <input type="checkbox" name="hobby" value="Fitness" title="Fitness">
+                                <input type="checkbox" name="hobby" value="Social" title="Social">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Consideration</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="consideration" value="traffic" title="traffic">
+                                <input type="checkbox" name="consideration" value="condition" title="condition"
+                                       checked="">
+                                <input type="checkbox" name="consideration" value="Exercise_equipment"
+                                       title="Exercise equipment">
+                                <input type="checkbox" name="consideration" value="Recreational_facilities"
+                                       title="Recreational facilities">
+                                <input type="checkbox" name="consideration" value="Nursing_quality"
+                                       title="Nursing quality">
+                                <input type="checkbox" name="consideration" value="Food_quality" title="Food quality">
+                                <input type="checkbox" name="consideration" value="Comfortable_bed"
+                                       title="Comfortable bed">
+                                <input type="checkbox" name="consideration" value="Food_quality" title="Food quality">
+                                <input type="checkbox" name="consideration" value="Comfortable_bed"
+                                       title="Comfortable bed">
+                                <input type="checkbox" name="consideration" value="Comfortable_sofa"
+                                       title="Comfortable sofa">
+                                <input type="checkbox" name="consideration" value="Comfortable_desk"
+                                       title="Comfortable desk">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="btn-css">
+                         <button type="button" value="confirm" class="layui-btn layui-btn-warm">Confirm</button>
+                     </div>-->
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="userSurvey">Confirm</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">Reset</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

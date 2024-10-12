@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to nurse hoursing</title>
+
+    <script type="text/javascript" src="/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="/js/login.js"></script>
+
+    <link rel="stylesheet" href="./layui/css/layui.css">
+
+    <link rel="stylesheet" href="/css/register.css">
+    <script type="text/javascript" src="/js/jquery-3.5.1.js"></script>
+    <script src="./layui/layui.js"></script>
+</head>
+
+<body>
+<div id="register_frame">
+    <p id="register_title">Create your account</p>
+    <form id="register" method="post" action="/register">
+        <p><label class="label_input">username</label><input type="text" id="userName" name="userName"
+                                                             class="text_field"/></p>
+        <p><label class="label_input">password</label><input type="password" id="password" name="password"
+                                                             class="text_field"/></p>
+        <p><label class="label_input">birthday</label><input type="text" id="birthday" name="birthday"
+                                                             class="text_field"/></p>
+        <p><label class="label_input">email</label><input type="text" id="email" name="email" class="text_field"/>
+        </p>
+        <div id="login_control">
+            <input type="button" class="layui-btn" id="register_login" value="register" onclick="register();"/>
+        </div>
+    </form>
+</div>
+
+<script>
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+
+        laydate.render({
+            elem: '#birthday'
+            , value: '1930-06-10'
+            , lang: 'en'
+        });
+    });
+</script>
+</body>
+
+</html>

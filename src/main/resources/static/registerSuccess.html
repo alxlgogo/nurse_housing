@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to nurse hoursing</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="/css/registerSuccess.css">
+    <script type="text/javascript" src="/js/jquery-3.5.1.js"></script>
+</head>
+
+<div id="register_frame">
+    <p id="register_title" style="font-size: 2.5em; margin-top: 30px; margin-bottom: 30px;">Register Success</p>
+    <div id="box"></div>
+
+    <p style="font-size: 2em;"><span id="time_Second" style="color: red;">5</span> seconds, it will jump to the login page</p>
+
+</div>
+
+<script>
+    var time=3;
+    var timer=setInterval(function(){
+        if(time>0){
+            time--;
+            $("#time_Second").html(time);
+        }else{
+            window.location.href="http://localhost:8080/login.html";
+        }
+    },1000);
+</script>
+</body>
+</html>

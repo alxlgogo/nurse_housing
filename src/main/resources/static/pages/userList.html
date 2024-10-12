@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to nurse hoursing</title>
+
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/userList.css">
+    <script type="text/javascript" src="/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script src="../layui/layui.js"></script>
+</head>
+
+<body>
+<div>
+    <div class="my-top-bar">
+        <ul class="layui-nav">
+            <li class="layui-nav-item">
+                <a href="">controller<span class="layui-badge">9</span></a>
+            </li>
+            <li class="layui-nav-item">
+                <a href=""><span th:text="${authorities}"></span><span class="layui-badge-dot"></span></a>
+            </li>
+            <li class="layui-nav-item">
+                <a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img"><span
+                        th:text="${userDetails.getUsername()}"></span></a>
+                <dl class="layui-nav-child">
+                    <dd><a href="/userEdit">edit info</a></dd>
+                    <dd><a href="/logout">Quit</a></dd>
+                </dl>
+            </li>
+
+            <li class="layui-nav-item">
+                <a href="/pay"><span>Pay</span></a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="userList">
+        <div class="my-left-bar">
+            <ul class="layui-nav layui-nav-tree layui-bg-cyan layui-inline my-layui-nav-tree" lay-filter="demo">
+
+                <span th:if="${#strings.contains(userDetails.getAuthorities(),'ROLE_Admin')}">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a href="javascript:;">User Management</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">User</a></dd>
+                            <dd><a href="javascript:;">Role</a></dd>
+                            <dd><a href="http://localhost:8080/selectpermission">permission</a></dd>
+                        </dl>
+                    </li>
+                </span>
+
+                <li class="layui-nav-item">
+                    <a href="javascript:;">Nurseing House</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">Recommended</a></dd>
+                        <dd><a href="">Preview</a></dd>
+                    </dl>
+                </li>
+
+                <span th:if="${#strings.contains(authorities,'ROLE_VIP')}">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">Make an appointmen</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">Dentist</a></dd>
+                        <dd><a href="">Yoga class</a></dd>
+                    </dl>
+                </li>
+                </span>
+
+                <li class="layui-nav-item"><a href="">google</a></li>
+                <li class="layui-nav-item"><a href="">Youtube</a></li>
+            </ul>
+        </div>
+        <div class="my-right-table">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th width="2%">Number</th>
+                    <th width="6%">UserName</th>
+                    <th width="10%">Name</th>
+                    <th>gender</th>
+                    <th>userType</th>
+                    <th>email</th>
+                    <th width="10%">birthday</th>
+                    <th>id</th>
+                    <th>checkin_time</th>
+                    <th>checkout_time</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user,stat : ${users}">
+                    <!--        No，1，2，3，4，5-->
+                    <td th:text="${stat.count}"></td>
+                    <td th:text="${user.userName}"></td>
+                    <td th:text="${user.firstName}+' '+${user.lastName}"></td>
+                    <td th:text="${user.gender}"></td>
+                    <td th:text="${user.userType}"></td>
+                    <td th:text="${user.email}"></td>
+                    <td th:text="${#strings.substring(user.birthday,0,10)}"></td>
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${#dates.format(user.checkinTime, 'yyyy-MM-dd')}"></td>
+                    <td th:text="${#dates.format(user.checkoutTime, 'yyyy-MM-dd')}"></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    layui.use('element', function () {
+        var element = layui.element;
+
+        //一些事件监听
+        element.on('tab(demo)', function (data) {
+            console.log(data);
+        });
+    });
+
+</script>
+
+</body>
+
+</html>
